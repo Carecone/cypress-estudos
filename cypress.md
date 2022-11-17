@@ -27,7 +27,7 @@ Localize a constante VERIFY_TEST_RUNNER_TIMEOUT_MS e altere de 30000 para 100000
 Executar novamente, com o comando npm run test ou npx cypress open
 
 
-### Caractristicas positivas do Cypress
+### Características positivas do Cypress
 
 * Execução rápida dos testes.
 * Verifica quais navegadores tenho instalado na máquina, facilitando na execução.
