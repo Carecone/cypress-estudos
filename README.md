@@ -32,6 +32,7 @@ Executar novamente, com o comando npm run test ou npx cypress open
 * Execução rápida dos testes.
 * Verifica quais navegadores tenho instalado na máquina, facilitando na execução.
 * Possibilidade de acompanhar toda a linha do tempo dos testes, como o estado anterior, o que aconteceu após a ação etc.
+<<<<<<< HEAD:cypress.md
 
 
 ### Principais comandos
@@ -39,3 +40,5 @@ Executar novamente, com o comando npm run test ou npx cypress open
 * describe: é uma função que tem 2 parâmetros, o primério é o nome da suite de testes, o segundo é uma função onde eu posso executar qualquer coisa
 * beforeEach: é um comando que é executado antes do inicio de cada caso de testes
 * it: é um item de testes ou caso de teste
+=======
+>>>>>>> 6b08750316fa6137474497d0c77f42337d145cc0:README.md
