@@ -11,8 +11,9 @@ Node
 * Na configuração do package.json, informar 'npx cypress  open' no 'test command'
 
 Cypress
-* npm i cypess --save-dev 
-
+```bash
+npm i cypess --save-dev 
+```
 ### Como iniciar o Cypress
 
 Utilize o comando npm run test para executar o script e abrir o Cypress.
@@ -32,13 +33,26 @@ Executar novamente, com o comando npm run test ou npx cypress open
 * Execução rápida dos testes.
 * Verifica quais navegadores tenho instalado na máquina, facilitando na execução.
 * Possibilidade de acompanhar toda a linha do tempo dos testes, como o estado anterior, o que aconteceu após a ação etc.
-<<<<<<< HEAD:cypress.md
 
 
 ### Principais comandos
 
 * describe: é uma função que tem 2 parâmetros, o primério é o nome da suite de testes, o segundo é uma função onde eu posso executar qualquer coisa
-* beforeEach: é um comando que é executado antes do inicio de cada caso de testes
-* it: é um item de testes ou caso de teste
-=======
->>>>>>> 6b08750316fa6137474497d0c77f42337d145cc0:README.md
+* beforeEach: é um comando que é executado antes do inicio de cada caso de testes.
+* it: é um item de testes ou caso de teste.
+* visit: resposável por abrir o link informado.
+* contains: resposável por identificar elementos. Retorna apenas 1 elemento.
+* get: resposável por identificar elementos. Busca todos os elementos que atendem aos parametros informados.
+* .type: responsável por realizar a ação de escrita.
+* .click: responsável por realizar a ação de click.
+* .should: responsável por realizar os assertions .
+
+
+
+### Três As
+
+O teste geralmente é composto por três As, que é o arrange, o act e o assert
+
+* O arrange é a preparação do ambiente
+* O act é a ação que eu quero fazer
+* O assert é o que eu quero verificar
