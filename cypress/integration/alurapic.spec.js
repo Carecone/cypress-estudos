@@ -33,4 +33,22 @@ describe('Login e registro de usuário alura pic', () => {
         cy.contains('button', 'Register').click();
         cy.contains('ap-vmessage', 'Must be lower case').should('be.visible');
     })
+
+    it('Verificar usuário válido', () =>{
+        cy.login('flavio','123')
+        cy.contains('a','Logout').should('be.visible');
+    })
+
+    it('Verificar usuário inválido', () =>{
+        cy.login('carecone','123')
+        cy.on('window:alert', (str) => {
+           expect(str).to.equal('Invalid user name or password');
+        })
+    })
+
+    it.only('Registrar um novo usuário', () => {
+        cy.registrarNovoUsuario('a1@gmail.com', 'Diego Souza', 'conta999999998', '12345678');
+        cy.contains('h4', 'Login').should('be.visible');
+    })
+
 })

@@ -1,1 +1,14 @@
-{}
+{
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "reportDir": "cypress/report/mochawesome-report",
+    "overwrite": true,
+    "html": true,
+    "json": false,
+    "timestamp": "mmddyyyy_HHMMss",
+    "charts": "false" ,
+    "code": "false",
+    "reporterTitle": "Automação com cypress"
+  },
+  "projectId": "zb9ibc"
+}
