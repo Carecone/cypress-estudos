@@ -6,7 +6,7 @@ Cypress.Commands.add('buscarFotos', (method, url) =>{
     })
 });
 
-Cypress.Commands.add('login', (method, url, body) =>{
+Cypress.Commands.add('loginApi', (method, url, body) =>{
     cy.request({
         method: method,
         url: url,

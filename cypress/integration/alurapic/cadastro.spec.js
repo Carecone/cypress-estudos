@@ -2,7 +2,7 @@ const usuarios = require('../../fixtures/usuario.json')
 
 describe('Registro de usuário alura pic', () => {
     beforeEach(() => {
-        cy.visit('http://alura-fotos.herokuapp.com');
+        cy.visit('/');
     })
     it('Verifica mensagens de campos obrigatórios', () => {
         cy.camposObrigatorios();

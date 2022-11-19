@@ -10,5 +10,7 @@
     "code": "false",
     "reporterTitle": "Automação com cypress"
   },
-  "projectId": "zb9ibc"
+  "projectId": "zb9ibc",
+  "baseUrl": "http://alura-fotos.herokuapp.com"
+
 }

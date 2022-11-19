@@ -126,3 +126,29 @@ Também é possível realizar os testes de API, a sintaxe e as valições são b
 ### Proteger dados sensíveis 
 
 É possível guardar configurações nas próprias variáveis de ambiente do cypress, como o cypress.json, porém, ele é um arquivo que precisamos enviar para o repositório. Vamos utilizar o cypress.env.json, que também é um arquivo de configuração, mas que não precisamos enviar para nosso repositório, deixando-o no gitignore.
+
+
+### Boas práticas
+Evitar flaky tests: São testes que ocorrem erros de forma aleatória, não necessariamente são falhas. Exemplo: era esperada que a request fosse realizada em 3 segundos, mas demorou 5, não quer dizer que houve uma falha, mas sim uma demora que pode ou não acontecer.
+
+Definir uma baseurl
+
+Utilizar variáveis de ambiente para dados sensíveis
+```bash
+cy.login(Cypress.env('userName'), Cypress.env('password'))
+```
+
+Utilizar {log: false} para dados sensíveis
+```bash
+type(senha, {log: false});
+```
+stub: muito útil para 'mockar' um status esperado.
+```bash
+cy.intercept('POST', `https://apialurapic.herokuapp.com/user/login`, {
+            statusCode: 400
+        }).as('stubPost')
+adicionar wait no cenário(it) para que o teste aguarde a interceptação
+cy.wait('@stubPost')
+```
+
+mock: muito útil quando queremos saber se o endpoint vai ser chamado corretamente, se os parâmetros esperados estão corretos etc.
