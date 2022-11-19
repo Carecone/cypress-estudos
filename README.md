@@ -13,7 +13,7 @@ Node
 
 Cypress
 ```bash
-npm i cypess --save-dev 
+npm i cypress --save-dev 
 ```
 
 ### Como iniciar o Cypress
