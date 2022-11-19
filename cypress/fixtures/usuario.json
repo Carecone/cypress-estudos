@@ -1,0 +1,26 @@
+[
+    {
+        "email": "a@gmail.com",
+        "fullName": "Teste teste",
+        "userName": "anakin12",
+        "password": "12345678"
+    },
+    {
+        "email": "b@gmail.com",
+        "fullName": "pao 123",
+        "userName": "pao12",
+        "password": "12345678"
+    },
+    {
+        "email": "c@gmail.com",
+        "fullName": "Naruto 65432",
+        "userName": "naruto12",
+        "password": "12345678"
+    },
+    {
+        "email": "d@gmail.com",
+        "fullName": "Saitama teste",
+        "userName": "saitama12",
+        "password": "12345678"
+    }
+]

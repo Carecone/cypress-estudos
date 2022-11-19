@@ -42,14 +42,16 @@ Executar novamente, com o comando npm run test ou npx cypress open
 * describe: é uma função que tem 2 parâmetros, o primério é o nome da suite de testes, o segundo é uma função onde eu posso executar qualquer coisa
 * beforeEach: é um comando que é executado antes do inicio de cada cenário de testes.
 * it: é um item de testes ou cenário de teste.
-* visit: resposável por abrir o link informado.
-* contains: resposável por identificar elementos. Retorna apenas 1 elemento.
-* get: resposável por identificar elementos. Busca todos os elementos que atendem aos parametros informados.
+* .visit: resposável por abrir o link informado.
+* .contains: resposável por identificar elementos. Retorna apenas 1 elemento.
+* .get: resposável por identificar elementos. Busca todos os elementos que atendem aos parametros informados.
 * .type: responsável por realizar a ação de escrita.
 * .click: responsável por realizar a ação de click.
-* .should: responsável por realizar os assertions.
+* .should: responsável por realizar as validações.
 * .only: faz com que seja executado somente o cenário que tenha esse comando.
-* cy.on: usado para eventos, como por exemplo windows.alert.
+* .on: usado para eventos, como por exemplo windows.alert.
+* .request: responsável por estruturar e validar as requests.
+* .expect: responsável por realizar as validações.
 
 
 ### Três As
@@ -101,3 +103,26 @@ Cypress.Commands.add('login', (nome, senha) => {
     cy.contains('button', 'login').click();
 })
 ```
+
+### Testes de API
+
+Também é possível realizar os testes de API, a sintaxe e as valições são bem tranquilas e parecidas as que temos no mercado.
+
+```bash
+   it('buscar fotos do flavio', () => {
+        cy.request({
+            method: 'GET',
+            url: 'https://apialurapic.herokuapp.com/flavio/photos',
+
+        }).then((res) => {
+            expect(res.status).to.be.equal(200)
+            expect(res.body).is.not.empty
+            expect(res.body[0]).to.have.property('description')
+            expect(res.body[0].description).to.be.equal('Farol iluminado')
+        })
+    })
+```
+
+### Proteger dados sensíveis 
+
+É possível guardar configurações nas próprias variáveis de ambiente do cypress, como o cypress.json, porém, ele é um arquivo que precisamos enviar para o repositório. Vamos utilizar o cypress.env.json, que também é um arquivo de configuração, mas que não precisamos enviar para nosso repositório, deixando-o no gitignore.
