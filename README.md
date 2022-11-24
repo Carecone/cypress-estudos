@@ -49,8 +49,8 @@ Executar novamente, com o comando npm run test ou npx cypress open
 * beforeEach: é um comando que é executado antes do inicio de cada cenário de testes.
 * it: é um item de testes ou cenário de teste.
 * .visit: resposável por abrir o link informado.
-* .contains: resposável por identificar elementos. Retorna apenas 1 elemento.
-* .get: resposável por identificar elementos. Busca todos os elementos que atendem aos parametros informados.
+* .contains: resposável por identificar elementos pelo texto.
+* .get: resposável por identificar elementos pela classe, tag, id etc.
 * .type: responsável por realizar a ação de escrita.
 * .click: responsável por realizar a ação de click.
 * .should: responsável por realizar as validações.
